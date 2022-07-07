@@ -23,6 +23,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 
+from apps.collections_links.views import CollectionViewSet
 from apps.files.views import FileViewSet
 from apps.users.views import AuthViewSet, UserViewSet
 
@@ -30,6 +31,7 @@ router = DefaultRouter()
 router.register('auth', AuthViewSet, basename='auth')
 router.register('users', UserViewSet, basename='users')
 router.register('files', FileViewSet, basename='files')
+router.register(r'collections', CollectionViewSet, basename='collections')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
