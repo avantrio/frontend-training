@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.common',
     'apps.files',
     'apps.users',
+    'apps.collections_links',
 ]
 
 MIDDLEWARE = [
