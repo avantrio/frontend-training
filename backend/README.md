@@ -31,3 +31,5 @@
 ## Postman Collection
 
 (https://www.getpostman.com/collections/0fc70999e1d207602b34)[https://www.getpostman.com/collections/0fc70999e1d207602b34]
+
+Updated collection - 07-07-2022: (https://www.getpostman.com/collections/da6ea8d568271eae71da)[https://www.getpostman.com/collections/da6ea8d568271eae71da]
