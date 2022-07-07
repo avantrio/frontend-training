@@ -1,0 +1,93 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\dinit\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\libnvvp;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\OracleDBInst\bin;C:\OracleDB\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MongoDB\Server\4.0\bin;C:\Program Files\Git\cmd;C:\adb\platform-tools;C:\Progra~1\Java\jdk1.8.0_221;C:\BigData\hadoop-2.9.1;C:\BigData\hadoop-2.9.1\bin;C:\BigData\hadoop-2.9.1\sbin;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\NVIDIA Corporation\Nsight Compute 2019.4.0\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\dinit\.windows-build-tools\python27\;C:\Users\dinit\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\WebStorm 2020.2\bin;C:\Users\dinit\AppData\Local\Programs\Microsoft VS Code\bin;C:\adb\platform-tools;C:\SonarQube\sonar-scanner-4.0.0.1744-windows\bin;C:\Program Files\Java\jdk-12.0.1\bin;C:\Users\dinit\AppData\Local\GitHubDesktop\bin;C:\Progra~1\Java\jdk1.8.0_221;C:\BigData\hadoop-2.9.1;C:\BigData\hadoop-2.9.1\bin;C:\BigData\hadoop-2.9.1\sbin;C:\Flutter\Cloned\flutter\bin;C:\Users\dinit\AppData\Local\Programs\Python\Python38;C:\Users\dinit\AppData\Local\Programs\Python\Python37;C:\Users\dinit\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\dinit\AppData\Local\atom\bin;C:\ffmpeg\bin;C:\Users\dinit\AppData\Local\Microsoft\WindowsApps;C:\Users\dinit\.dotnet\tools;C:\Users\dinit\AppData\Roaming\npm
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  14.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Avantrio\GIT\django-react-boilerplate\webapp\node_modules\node-sass\vendor\win32-x64-83\binding.node'
+
+npm manifest: 
+  {
+    "name": "admin",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@reduxjs/toolkit": "^1.3.6",
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.3.2",
+      "@testing-library/user-event": "^7.1.2",
+      "axios": "^0.19.2",
+      "bootstrap": "^4.5.2",
+      "formik": "^2.1.4",
+      "lodash": "^4.17.20",
+      "node-sass": "^4.14.1",
+      "react": "^16.13.1",
+      "react-datepicker": "^3.1.3",
+      "react-dom": "^16.13.1",
+      "react-filepond": "^7.0.1",
+      "react-redux": "^7.2.0",
+      "react-redux-toastr": "^7.6.4",
+      "react-router": "^5.2.0",
+      "react-router-dom": "^5.2.0",
+      "react-scripts": "3.4.1",
+      "redux": "^4.0.5",
+      "yup": "^0.29.3"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "storybook": "start-storybook -p 6006 -s public",
+      "build-storybook": "build-storybook -s public"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@babel/core": "^7.11.1",
+      "@storybook/addon-actions": "^6.0.7",
+      "@storybook/addon-essentials": "^6.0.7",
+      "@storybook/addon-links": "^6.0.7",
+      "@storybook/node-logger": "^6.0.7",
+      "@storybook/preset-create-react-app": "^3.1.4",
+      "@storybook/react": "^6.0.7",
+      "babel-loader": "^8.1.0",
+      "eslint": "^7.2.0",
+      "eslint-config-airbnb": "^18.2.1",
+      "eslint-config-prettier": "^7.1.0",
+      "eslint-plugin-import": "^2.22.1",
+      "eslint-plugin-jsx-a11y": "^6.4.1",
+      "eslint-plugin-react": "^7.22.0",
+      "eslint-plugin-react-hooks": "^4.0.0",
+      "prettier": "2.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

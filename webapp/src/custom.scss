@@ -1,0 +1,17 @@
+$body-bg:rgba(246, 248, 255, 1.0);
+
+$primary: rgba(8, 51, 255, 1.0);
+$light-blue: rgba(55, 167, 255, 1.0);
+$light-grey: rgba(246,248,255,1.0);
+$medium-grey: rgb(177, 172, 172);
+$grey-2: rgba(54, 54, 72, 0.1);
+$grey-3: rgba(54, 54, 72, 0.3);
+$grey-8: rgb(54, 54, 72);
+$success: rgba(0,213,146,1.0);
+$gradient-bg: linear-gradient(0deg, rgba(54,88,254,1) 0%, $primary 70%);
+
+$enable-responsive-font-sizes: true;
+
+@import "bootstrap/scss/bootstrap";
+@import "pages";
+@import "component";

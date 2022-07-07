@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+  database:
+    hostname: database
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: boilerplate
+    expose:
+      - '5432'
+    ports:
+      - 5432:5432
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    command: ["postgres", "-c", "log_statement=all"]
+
+  server:
+    hostname: server
+    image: registry.apps.avantrio.xyz/project/server
+    environment:
+      DEBUG: 0
+      DATABASE_USER: admin_staging
+      DATABASE_PWD: admin@staging#34
+      DATABASE_NAME: boilerplate
+      DATABASE_HOST: 172.17.0.1
+      DATABASE_PORT: 5432
+      APP_HOST: 'project.staging.avantrio.xyz'
+      BROKER_USER: broker_admin
+      BROKER_PASSWORD: admin@11235
+      BROKER_HOST: rabbitmq
+      BROKER_PORT: 5672
+    expose:
+      - '8000'
+    ports:
+      - 8005:8000 # {8005 - host port} {change 8005 if it is already assigned to a project}
+    volumes: 
+      - ./backend:/app
+    command: gunicorn project.wsgi:application --bind 0.0.0.0:8000
+
+  worker:
+    hostname: worker
+    image: server
+    environment:
+      DEBUG: 0
+      DATABASE_USER: root
+      DATABASE_PWD: admin
+      DATABASE_NAME: boilerplate
+      DATABASE_HOST: host.docker.internal
+      DATABASE_PORT: 5432
+      APP_HOST: 'project.staging.avantrio.xyz'
+      BROKER_USER: broker_admin
+      BROKER_PASSWORD: admin@11235
+      BROKER_HOST: rabbitmq
+      BROKER_PORT: 5672
+    command: celery -A project worker -Q celery -l INFO
+
+  rabbitmq:
+    image: rabbitmq:latest
+    environment:
+      - RABBITMQ_DEFAULT_USER=broker_admin
+      - RABBITMQ_DEFAULT_PASS=admin@11235
+    ports:
+      - "5672:5672"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+networks:
+  default:
+
+volumes:
+  database-data:
